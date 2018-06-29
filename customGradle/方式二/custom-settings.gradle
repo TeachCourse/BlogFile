@@ -1,0 +1,31 @@
+//在library下的build.gradle添加相关插件及配置信息
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
+
+ext {
+    //参数详细说明：https://blog.csdn.net/u014803950/article/details/64124375
+    bintrayRepo = 'Maven'
+    bintrayName = 'utils'
+
+    publishedGroupId = 'cn.teachcourse'
+    libraryName = 'baseutil'
+    artifact = 'baseutil'
+
+    libraryDescription = '一个常用工具类集合库'
+
+    siteUrl = 'https://github.com/TeachCourse/BlogSource/tree/master/baseutil'
+    gitUrl = 'https://github.com/TeachCourse/BlogSource.git'
+
+    libraryVersion = '0.0.3'
+
+    developerId = 'teachcourse'
+    developerName = 'huang zhaolin'
+    developerEmail = 'teachcourse@sohu.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
